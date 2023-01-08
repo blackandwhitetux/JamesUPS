@@ -2,7 +2,7 @@
 
 Based on https://github.com/abratchik/HIDPowerDevice by Alex Bratchik.
 
-![PCB Render](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/ups.png)
+![PCB Render](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/board_render.png)
 ![Board photo](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/serial_number_0001.jpg)
 A work in progress...
 
