@@ -2,14 +2,21 @@
 
 Based on https://github.com/abratchik/HIDPowerDevice by Alex Bratchik.
 
+## todo:
 
+* work out how to measure the battery voltage on A0
+* work out how to measure the input voltage on A1
+* work out how to measure the output current on A2
+* work out how to measure the battery current on A3 and whether it is functional during charge or discharge
+
+## PCB design 0.1
 
 ![Schematic](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/schematic.png)
 ![Gerber render 2D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/gerber_render.png)
 ![PCB Render 3D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/board_render.png)
 ![Board photo](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/serial_number_0001.jpg)
 
-A work in progress...
+A work in progress... 
 
 This design is for a 12v adjustable voltage output UPS using the following items:
 
