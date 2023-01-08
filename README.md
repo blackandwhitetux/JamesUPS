@@ -1,4 +1,4 @@
-#Leonardo based 12v DC/DC UPS with LifePO4 battery and current monitoring
+__ Leonardo based 12v DC/DC UPS with LifePO4 battery and current monitoring __
 
 Based on https://github.com/abratchik/HIDPowerDevice by Alex Bratchik.
 
