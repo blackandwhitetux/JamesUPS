@@ -3,7 +3,7 @@
 #define MINUPDATEINTERVAL   26
 
 int iIntTimer=0;
-
+#test github commit
 
 // String constants 
 const char STRING_DEVICECHEMISTRY[] PROGMEM = "PbAc";
