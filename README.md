@@ -15,11 +15,12 @@ This design is for a 12v adjustable voltage output UPS using the following items
 ## todo (basics):
 
 #### work out how to measure the battery voltage on A0
-* nominal 6.4v, min 2v, max (3.65*2) 7.3v
-* through a 10k/100k resistive divider so should be 1v - 3.65v if analog in reads 0-1024 for 0-5v
+* 2S LifePO4 6Ah cells - maybe 2S2P for  
+* min (2v*2) 4v, nominal (3.2v*2) 6.4v, max (3.65v*2) 7.3v
+* through a 100k/10k resistive divider so should be 0.4v - 0.73v - may need to tweak resistor values
 
 #### work out how to measure the input voltage on A1
-* as above, hopefully vrange is from 0-5v as input voltage is 12v
+* as above, hopefully vrange is from 0-5v as input voltage is 12v - may need to tweak resistor values
 
 #### work out how to measure the output current on A2
 * confirm gain function on INA180A2IDBVR (should be 50v/v) and check high-power resistor used (0.05R) gives sane values
