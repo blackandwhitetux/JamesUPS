@@ -7,9 +7,9 @@ A work in progress...
 This design is for a 12v adjustable voltage output UPS using the following items:
 
 * Arduino Pro Micro
-* XL6009 boost converter
-* XL4005 buck converter
-* 2x INA180A2IDBVR current sense chips
+* XL6009 boost converter to boost the battery from 6.4v to 12-30v
+* XL4005 buck converter to charge the battery more efficiently
+* 2x INA180A2IDBVR current sense chips, one for battery and one for output rail
 * 2x FQP30N06L N channel MOSFETS for switching the battery and output
 
 ## todo (basics):
