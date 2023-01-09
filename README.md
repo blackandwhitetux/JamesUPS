@@ -2,20 +2,6 @@
 
 Based on https://github.com/abratchik/HIDPowerDevice by Alex Bratchik.
 
-## todo:
-
-* work out how to measure the battery voltage on A0
-* work out how to measure the input voltage on A1
-* work out how to measure the output current on A2
-* work out how to measure the battery current on A3 and whether it is functional during charge or discharge
-
-## PCB design 0.1
-
-![Schematic](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/schematic.png)
-![Gerber render 2D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/gerber_render.png)
-![PCB Render 3D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/board_render.png)
-![Board photo](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/serial_number_0001.jpg)
-
 A work in progress... 
 
 This design is for a 12v adjustable voltage output UPS using the following items:
@@ -25,6 +11,36 @@ This design is for a 12v adjustable voltage output UPS using the following items
 * XL4005 buck converter
 * 2x INA180A2IDBVR current sense chips
 * 2x FQP30N06L N channel MOSFETS for switching the battery and output
+
+## todo (basics):
+
+* work out how to measure the battery voltage on A0
+- nominal 6.4v, min 2v, max (3.65*2) 7.3v
+- through a 10k/100k resistive divider so should be 0.2v - 0.73v if analog in reads 0-1024 for 0-1v, or values x5 if it is 0-1024 for 0-5v
+
+* work out how to measure the input voltage on A1
+- as above
+
+* work out how to measure the output current on A2
+- confirm gain function on INA180A2IDBVR and check high-power resistor used gives sane values
+
+* work out how to measure the battery current on A3 and whether it is functional during charge or discharge
+- as above
+
+* decide how to pwm the battery connection so as not to take all the current from the source
+
+## todo (more advanced)
+
+* adapt my measurement code to Alex's UPS sketch
+* implement coloumn counting as we know battery voltage and current and time
+* implement anti-brownout based auto reset based on output current draw measurements
+
+## PCB design 0.1
+
+![Schematic](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/schematic.png)
+![Gerber render 2D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/gerber_render.png)
+![PCB Render 3D](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/board_render.png)
+![Board photo](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/serial_number_0001.jpg)
 
 Pro Micro I/O pins as follows:
 
