@@ -16,13 +16,15 @@ This design is for a 12v adjustable voltage output UPS using the following items
 
 #### work out how to measure the battery voltage on A0
 * nominal 6.4v, min 2v, max (3.65*2) 7.3v
-* through a 10k/100k resistive divider so should be 0.2v - 0.73v if analog in reads 0-1024 for 0-1v, or values x5 if it is 0-1024 for 0-5v
+* through a 10k/100k resistive divider so should be 1v - 3.65v if analog in reads 0-1024 for 0-5v
 
 #### work out how to measure the input voltage on A1
-* as above, hopefuly vrange is from 0-5v as input voltage is 12v
+* as above, hopefully vrange is from 0-5v as input voltage is 12v
 
 #### work out how to measure the output current on A2
-* confirm gain function on INA180A2IDBVR and check high-power resistor used gives sane values
+* confirm gain function on INA180A2IDBVR (should be 50v/v) and check high-power resistor used (0.05R) gives sane values
+* according to the below link, we should get 5v @ 2A, 2.5v @1A, etc
+* https://techoverflow.net/2019/12/17/sense-resistor-current-shunt-current-sense-amplifier-calculator/
 
 #### work out how to measure the battery current on A3 and whether it is functional during charge or discharge
 * as above
@@ -30,11 +32,12 @@ This design is for a 12v adjustable voltage output UPS using the following items
 #### decide how to pwm the battery connection so as not to take all the current from the source
 * check battery bms works with pwm or if it needs extra caps
 
+
 ## todo (more advanced)
 
 * adapt my measurement code to Alex's UPS sketch
-* implement coloumn counting as we know battery voltage and current and time
-* implement anti-brownout based auto reset based on output current draw measurements
+* implement coloumb counting as we know battery voltage and current and time
+* implement anti-brownout based auto reset based on output current draw measurements (configurable by jumper bodge wire?)
 
 ## PCB design 0.1
 
@@ -46,6 +49,13 @@ This design is for a 12v adjustable voltage output UPS using the following items
 Pro Micro I/O pins as follows:
 
 ![MCU Pinouts](https://github.com/blackandwhitetux/JamesUPS/blob/master/pcb_design/mcu_pinout.png)
+
+## PCB design 0.2
+
+still making changes, ideas as follows:
+
+* bidirectional battery current measurement
+
 
 
 ### Additional setup step on Linux hosts
