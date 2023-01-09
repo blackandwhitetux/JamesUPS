@@ -15,19 +15,20 @@ This design is for a 12v adjustable voltage output UPS using the following items
 ## todo (basics):
 
 * work out how to measure the battery voltage on A0
-- nominal 6.4v, min 2v, max (3.65*2) 7.3v
-- through a 10k/100k resistive divider so should be 0.2v - 0.73v if analog in reads 0-1024 for 0-1v, or values x5 if it is 0-1024 for 0-5v
+	nominal 6.4v, min 2v, max (3.65*2) 7.3v
+	through a 10k/100k resistive divider so should be 0.2v - 0.73v if analog in reads 0-1024 for 0-1v, or values x5 if it is 0-1024 for 0-5v
 
 * work out how to measure the input voltage on A1
-- as above
+	as above, hopefuly vrange is from 0-5v as input voltage is 12v
 
 * work out how to measure the output current on A2
-- confirm gain function on INA180A2IDBVR and check high-power resistor used gives sane values
+	confirm gain function on INA180A2IDBVR and check high-power resistor used gives sane values
 
 * work out how to measure the battery current on A3 and whether it is functional during charge or discharge
-- as above
+	as above
 
 * decide how to pwm the battery connection so as not to take all the current from the source
+
 
 ## todo (more advanced)
 
